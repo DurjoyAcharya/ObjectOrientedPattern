@@ -1,3 +1,13 @@
+/** */
+function* generator(i)
+{
+    yield i;
+    yield i+10;
+}
+const obj=generator(10);
+console.log(obj.next().value);
+console.log(obj.next().value);
+
 function* idMaker()
 {
     var index=0;
