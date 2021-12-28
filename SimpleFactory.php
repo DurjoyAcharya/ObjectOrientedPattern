@@ -21,3 +21,14 @@ class WoodenDoor implements Door
     return $this->width;
     }
 }
+class Doorfactory{
+public static function makeDoor($length,$width):Door
+{
+    return new WoodenDoor($length,$width);
+}
+}
+//uses of DoorFactory
+$door=Doorfactory::makeDoor(150,160);
+echo "Height: ".$door->getHeight();
+echo "\n";
+echo "Width: ".$door->getWidth();
